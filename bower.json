@@ -1,7 +1,8 @@
 {
   "name": "icon-toggle",
-  "version": "0.0.0",
-  "homepage": "https://github.com/Polymer/element-tutorial",
+  "description": "icon-toggle",
+  "version": "0.0.1",
+  "homepage": "https://github.com/first87/icon-toggle",
   "license": "MIT",
   "ignore": [
     "**/.*",
