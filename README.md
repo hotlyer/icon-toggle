@@ -1,8 +1,8 @@
-# Your first Polymer element
+# icon-toggle
 
 This repo goes with the [Build your first Polymer element tutorial](https://www.polymer-project.org/2.0/start/first-element/intro).
 
-## Running the tutorial code
+## Running the code
 
 You'll need to install some command-line tools to manage dependencies and to run the demo.
 
@@ -12,18 +12,12 @@ You'll need to install some command-line tools to manage dependencies and to run
 
         npm install -g bower polymer-cli
 
-3.  Clone this repo:
+3.  Clone this repo and install dependencies in it with `bower`:
 
-        https://github.com/PolymerLabs/polymer-2-first-element.git
-        
-4.  Change directory to your local repo and install dependencies with `bower`:
-
-        cd polymer-2-first-element
         bower install
-        
-5.  To preview your element, run the Polymer development server from the repo directory:
+
+5.  Run the Polymer development server to preview:
 
         polymer serve
-        
-    Open `localhost:8080/components/icon-toggle/demo/` in your browser. (Note that the path uses `icon-toggle`—the 
-    component name listed in this element's `bower.json` file—rather than the actual directory name.) 
+
+    Open `localhost:8080/components/icon-toggle/demo/` in your browser.
