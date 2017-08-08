@@ -8,6 +8,49 @@
       window.Polymer.dom = 'shadow';
       */
     </script>
+    <custom-style>
+      <style>
+        /**
+         * Document Level Styling
+         *
+         * Custom properties can only be defined in rule-sets that match the html selector or a Polymer custom element. This is a limitation of the Polymer implementation of custom properties.
+         */
+
+        /**
+         * This will define document-wide default values
+         *  - for any custom variables at the lowest specificity
+         *  - and will be overridden by the corresponding rule inside other elements
+         */
+        html {
+          /* this will work; but may be possibly overridden by `html` rule (`:host`) inside `<demo-element>` */
+          --icon-toggle-outline-color: red;
+          /* this will work; will affect all `<iron-icon>` elements at the document level - the lowest specificity */
+          --iron-icon-width: 40px;
+          --iron-icon-height: 40px;
+        }
+
+        /**
+         * This will work SINCE
+         *  - the `demo-element` selector matches the `<demo-element>` element in the document scope,
+         *  - and it has a higher specificity than the `html` rule (`:host`) inside `<demo-element>`,
+         * so it overrides the values there.
+         */
+        demo-element {
+          --icon-toggle-color: purple;
+          --icon-toggle-pressed-color: green;
+        }
+
+        /**
+         * This will NOT work SINCE
+         *  the `iron-icon` selector doesn't match the `<iron-icon>` elements
+         *  which are inside other elements's shadow DOM.
+         */
+        iron-icon {
+          --iron-icon-width: 40px;
+          --iron-icon-height: 40px;
+        }
+      </style>
+    </custom-style>
     <link rel="import" href="demo-element.html">
   </head>
   <body>
